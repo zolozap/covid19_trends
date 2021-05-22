@@ -27,10 +27,4 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname+'/index.html'))
 })
 
-app.listen(port, () => {
-    console.log(`App SGN run at http://localhost:${port}`)
-})
-
-
-// var data = Array.from({length: 1}, (x, i) => getapi(i+1))
-
+exports.sgn_test = functions.https.onRequest(app);
